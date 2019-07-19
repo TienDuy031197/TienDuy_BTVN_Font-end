@@ -69,6 +69,7 @@ a:hover{
 .img-co{
  width: 32px;
  height: 17px;
+ border-radius: 5px;
 }
 .img1{
 
@@ -106,6 +107,7 @@ a:hover{
  padding-top: 16px;
  padding-bottom: 16px;
 }
+
 .learning-2{
  color: #DBAC69;
  display: inline;
