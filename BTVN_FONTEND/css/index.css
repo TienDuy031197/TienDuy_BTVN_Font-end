@@ -78,7 +78,6 @@ a:hover{
  float: left;
  padding-top: 4px;
  padding-bottom: 1px;
-
 }
 .img2{
  height: 25px;
@@ -123,6 +122,9 @@ a:hover{
 .card{
  margin-top: 30px;
 }
+.card:hover{
+  border: 2px solid #006400;
+}
 .card-img-top {
  padding: 18px;
 }
@@ -156,7 +158,6 @@ a:hover{
  font-weight: bold;
  font-size: 14px;
  line-height: 16px;
-
 
  float: left;
  margin-left: 100px;
@@ -224,10 +225,6 @@ a:hover{
 .imglogo{
  margin-top: 25px;
  margin-left: 65px;
-}
-
-.card:hover{
-  border: 2px solid #006400;
 }
 
 /*===========CSS POPUP============*/
