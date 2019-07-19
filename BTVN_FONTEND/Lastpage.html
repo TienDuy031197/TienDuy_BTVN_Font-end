@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kết thúc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/PageCss.css">
+</head>
+<body onload="time()">
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="khung">
+						<div class="imgna">
+							<img class="img-native" src="image/bt_native.PNG" alt="native_gen_5">
+						</div>
+						<div class="imgai">
+							<img class="img-ai" src="image/nativeai.PNG" alt="native_ai">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border" style="
+						margin-bottom: 8px;
+						">Thời gian học</legend>
+						<span id="clock"></span>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="imgage">
+						<img class="image-sao" src="image/ngoisao.png" alt="image-result">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<p class="congratulation">Congratulation</p>
+					<button type="button" class="btn btn-success kq" >Xem kết quả bài test</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		function time() {
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; 
+			var yyyy = today.getFullYear();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			nowTime = h+":"+m+":"+s;
+			if(dd<10){dd='0'+dd} 
+				if(mm<10){mm='0'+mm} 
+					today =  dd+'/'+mm+'/'+yyyy;
+				document.getElementById("clock").innerHTML= nowTime
+				clocktime=setTimeout("time()","1000","JavaScript");
+				function checkTime(i)
+				{
+					if(i<10){
+						i="0" + i;
+					}
+					return i;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mx-auto">
+				<div id="first">
+					<div class="myform form ">
+						<div class="logo mb-3">
+							<div class="col-md-12 text-center">
+								<h1>Login TOPICA NATIVE SYSTEM</h1>
+							</div>
+						</div>
+						<form action="" method="post" name="login">
+							<div class="form-group">	                              
+								<input type="text" name="email"  class="form-control" id="username" aria-describedby="emailHelp" placeholder="username">
+								<p id="failUsername"></p>
+							</div>
+							<div class="form-group">	                              
+								<input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="password">
+								<p id="failPassword"></p>
+							</div>
+							<div class="col-md-12 text-center ">
+								<button id="buttonlogin" type="submit" class=" btn btn-block mybtn btn-primary" onclick="checkLogin()">Login</button>
+							</div>
+							<div class="col-md-12 ">
+								<div class="login-or">
+									<p class="nn">You haven't an account yet?</p>
+								</div>
+							</div>
+							<div class="col-md-12 text-center hd">
+								<button type="submit" class=" btn btn-block mybtn btn-success tx-tfm">Register</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</body>
+<script type="text/javascript">
+	document.getElementById("buttonlogin").addEventListener("click", function(event){
+		event.preventDefault()
+	});
+
+</script>
+<script type="text/javascript">
+	function checkLogin() {
+		var username=document.getElementById("username").value;
+		var password=document.getElementById("password").value;
+		
+		if(username=="duy" && password=="1"){
+			Redirect();
+		}else  if(username!="duy" && password!="1"){
+			document.getElementById("failUsername").innerHTML = "incorrect Username, try again ?";
+			document.getElementById("failPassword").innerHTML = "incorrect Password, try again ?";
+		}else if(username != "duy" && password=="1"){
+			document.getElementById("failUsername").innerHTML = "incorrect Username, try again ?";
+			document.getElementById("failPassword").innerHTML = "";
+		}else if(password!="1" && username=="duy" ){
+			document.getElementById("failPassword").innerHTML = "incorrect Password, try again ?";
+			document.getElementById("failUsername").innerHTML = "";
+		}
+		function Redirect() {
+			window.location="file:///D:/html/BTVN_FONTEND/index.html";
+		}	
+	}
+</script>
+</html>

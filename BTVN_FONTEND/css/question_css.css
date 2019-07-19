@@ -1,0 +1,236 @@
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.khung{
+ margin-top: 30px;
+ margin-left: 20px;
+}
+.img-native{
+  width: 150px;
+  border-right: 3px solid #dbad6b;
+}
+.imgna{
+   display: inline-block;
+   float: left;
+}
+.imgai{
+   display: inline-block;
+}
+.img-ai{
+  width: 140px;
+}
+
+fieldset.scheduler-border {
+ padding: 0 1.4em 1.4em 1.4em !important;
+ -webkit-box-shadow: 0px 0px 0px 0px #000;
+ box-shadow: 0px 0px 0px 0px #000;
+
+ border: 2px solid #DBAC69;
+ width: 172px;
+ height: 60px;
+ border-radius: 5px;
+ margin: auto;
+ margin-top: 10px;
+}
+
+legend.scheduler-border {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.text{
+   margin:40px;
+}
+.text1{
+
+ font-family: Roboto;
+ font-style: normal;
+ font-weight: bold;
+ font-size: 20px;
+ line-height: 23px;
+ color: #333333;
+
+}
+.text2{
+   font-style: italic;
+}
+
+.list-group-item{
+   height: 70px;
+   margin-bottom: 12px;
+   border: 3px solid rgba(0,0,0,.125);
+   border-radius: 10px;
+}
+
+.radi{
+ float: left;
+ margin-top: 16px;
+}
+.answer{
+   display: -webkit-inline-box;
+   margin-top: 12px;
+   margin-left: 20px;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   line-height: 21px;
+   color: #333333;
+}
+.list-group-item:first-child {
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.list-group-item:hover{
+   background: #00fdff;
+   border: 4px solid #008FD7;
+   box-sizing: border-box;
+   border-radius: 10px;
+}
+
+.teacher{
+  height: 130px;
+  margin: 25px;
+}
+
+.progress {
+   overflow: visible;
+}
+
+.progress-wrapper {
+ width: 100%;
+ height: 10px;
+ position: relative;
+ display: inline-block;
+}
+
+.progress-wrapper .tooltip-box {
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ position: absolute;
+ z-index: 1;
+ bottom: 150%;
+ display: table;
+ transition: .6s ease;
+ margin-left: 0px;
+ background-color: #000;
+}
+
+.progress-wrapper .tooltip-box::after {
+ content: " ";
+ position: absolute;
+ top: 98%;
+ left: 50%;
+ margin-left: -5px;
+ border-width: 5px;
+ border-style: solid;
+ border-color: #dbac69 transparent transparent transparent;
+}
+
+.tooltip-text {
+ display: table-cell;
+ text-align: center;
+ vertical-align: middle;
+}
+
+.progress-proceed {
+ width: 0px;
+ height: 10px;
+}
+.progress-bar{
+ border: 7px solid #DBAC69;
+ border-radius: 5px
+}
+.tooltip-text{
+   background-color: #DBAC69;
+   border-radius: 23px;
+}
+.fa-arrow-left{
+ float: left;
+ margin-top: 2px;
+ width: 11px;
+}
+.btn{
+
+  width: 140px;
+  height: 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 10px;
+
+}
+.btn-success {
+    background-color: #53ca6e;
+    border-color: #188030;
+}
+.btn-secondary {
+    background-color: #85909a;
+    border-color: #353c42;
+}
+.fa-arrow-right{
+   float: right;
+   margin-top: 1px;
+}
+.next{
+  display: -webkit-inline-box;
+}
+.b-ton{
+   margin: 20px 79px;
+}
+span{
+    margin: 30px;
+    font-weight: bold;
+
+}

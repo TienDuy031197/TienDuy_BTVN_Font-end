@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Câu hỏi</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/question_css.css">
+</head>
+<body onload="time()">
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="khung">
+						<div class="imgna">
+							<img class="img-native" src="image/bt_native.PNG" alt="native_gen_5">
+						</div>
+						<div class="imgai">
+							<img class="img-ai" src="image/nativeai.PNG" alt="native_ai">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<fieldset class="scheduler-border">
+						<legend class="scheduler-border" style="
+						margin-bottom: 8px;
+						">Thời gian học</legend>
+						<span id="clock"></span>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-6">
+					<div class="text">
+						<p class="text1">Choose the best word to complete the sentence.</p>
+						<p class="text2">(Chọn đáp án đúng nhất.)</p>
+					</div>
+					<div class="click">
+						<ul class="list-group">
+							<li class="list-group-item"><input class="radi" type="radio" name="gender" value="male"><p class="answer">I am a cup</p></li>
+							<li class="list-group-item"><input class="radi" type="radio" name="gender" value="male"><p class="answer">I am a boy</p></li>
+							<li class="list-group-item"><input class="radi" type="radio" name="gender" value="male"><p class="answer">I a boy</p></li>
+							<li class="list-group-item"><input class="radi" type="radio" name="gender" value="male"><p class="answer">I'm very a boy</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="imgge">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="teacher" src="image/teacher1.PNG" alt="img-teacher">
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="tooltip-point" class="progress progress-wrapper">
+						<div id="tooltip-point-bar" class="progress-bar progress-proceed"></div>
+						<span id="tooltip-point-tooltip-box" class="tooltip-box">
+							<div id="tooltip-point-tooltip" class="tooltip-text" >5/20</div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					
+				</div>
+				<div class="col-md-5">
+					<div class="b-ton">
+						<button type="button" class="btn btn-secondary" onclick="backClick()"><i class="fas fa-arrow-left"></i>Privious</button>
+						<button type="button" class="btn btn-success" onclick="forwardClick()"><p class="next" >Next</p><i class="fas fa-arrow-right cb"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		function renderProgressBar(percentage) {
+			$("#tooltip-point-bar").css("width", percentage + "%");
+			var progressWidth = $("#tooltip-point").width();
+			var tooltipWidth = $("#tooltip-point-tooltip-box").width();
+			var tooltipMargin = progressWidth / 100 * percentage - tooltipWidth / 2;
+			if (tooltipMargin < 0) {
+				tooltipMargin = 0;
+			} else if (tooltipMargin + tooltipWidth >= progressWidth) {
+				tooltipMargin -= tooltipWidth / 2;
+			}
+			$("#tooltip-point-tooltip-box").css("margin-left", tooltipMargin + "px");
+		}
+
+		var count = 10;
+		var i=new Number(5);
+		renderProgressBar(10);
+
+		function forwardClick() {
+			i=i+5;
+			count = count +30;
+			if(i<=20){
+				renderProgressBar(count);
+				document.getElementById("tooltip-point-tooltip").innerHTML= i+"/20";
+			}else{
+				RedirectUp();
+			}
+
+		}
+		function backClick(){
+			if(i>=5 && i<= 20){
+				i = i-5;
+				count = count - 30;
+				renderProgressBar(count);
+				document.getElementById("tooltip-point-tooltip").innerHTML=i+"/20";
+			}else{
+				ForwardDirection();
+			}
+		}
+		function RedirectUp() {
+			window.location="file:///D:/html/BTVN_FONTEND/Lastpage.html";
+		}
+		function ForwardDirection(){
+			window.location="file:///D:/html/BTVN_FONTEND/index.html";
+		}
+	</script>
+	<script type="text/javascript">
+		function time() {
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; 
+			var yyyy = today.getFullYear();
+			var h=today.getHours();
+			var m=today.getMinutes();
+			var s=today.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			nowTime = h+":"+m+":"+s;
+			if(dd<10){dd='0'+dd} 
+				if(mm<10){mm='0'+mm} 
+					today =  dd+'/'+mm+'/'+yyyy;
+				document.getElementById("clock").innerHTML= nowTime
+				clocktime=setTimeout("time()","1000","JavaScript");
+				function checkTime(i)
+				{
+					if(i<10){
+						i="0" + i;
+					}
+					return i;
+				}
+			}
+		</script>
+	</body>
+	</html>
